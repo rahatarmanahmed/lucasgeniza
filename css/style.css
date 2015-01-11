@@ -50,6 +50,7 @@ body {
 
 #content {
 	font-size: 32px;
+	position: relative;
 }
 
 #content ul {

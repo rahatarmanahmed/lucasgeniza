@@ -6,7 +6,10 @@ var Content = Backbone.View.extend({
     },
     render:function(route){
         var template = route === '' ? 'default' : route;
-        this.$el.html(_.template(document.getElementById(template).innerHTML));
+        this.$el.animate({opacity:0, left: -50}, 250, function(){
+            this.$el.html(_.template(document.getElementById(template).innerHTML))
+                .animate({opacity:1, left: 0}, 250);
+        }.bind(this));
     }
 });
 
