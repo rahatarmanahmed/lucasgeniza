@@ -1,0 +1,63 @@
+/* Player */
+
+.sc-artwork-list, .sc-trackslist, .sc-scrubber, .sc-info > h4, .sc-info > p, .sc-info > a, .sc-info-toggle {
+    display: none;
+}
+
+.sc-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 32px;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+}
+
+.sc-player .hidden {
+    display: none;
+}
+
+/* Controls */
+
+.sc-player .sc-controls {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+}
+
+.sc-player .sc-controls a:not(.hidden) {
+    color: transparent;
+    background: url('../img/play.svg');
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
+
+.sc-player .sc-controls a.sc-play {
+    background: url('../img/play.svg');
+}
+
+.sc-player.playing .sc-controls a.sc-play{
+    background: url('../img/pause.svg');
+}
+
+/* Info */
+
+.sc-player .sc-info {
+    display: inline-block;
+    margin-left: 8px;
+    height: 32px;
+}
+
+.sc-player .sc-info h3 {
+    margin: 0;
+    padding: 0;
+    line-height: 32px;
+}
+
+.sc-player .sc-info h3 a{
+    line-height: 32px;
+}

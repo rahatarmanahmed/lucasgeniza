@@ -3,18 +3,26 @@
 	<title>DJ 'Niza</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/sc-player-custom.css">
 
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="bower_components/vide/dist/jquery.vide.min.js"></script>
 	<script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
 	<script type="text/javascript" src="bower_components/backbone/backbone.js"></script>
+	<script type="text/javascript" src="bower_components/soundcloud.custom.player/js/soundcloud.player.api.js"></script>
+	<script type="text/javascript" src="bower_components/soundcloud.custom.player/js/sc-player.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 	<script id="default" type="text/html">
 		<ul>
 			<li><a href="#bio">bio</a></li>
 			<li><a href="#music">music</a></li>
-			<li><a href="#social">social</a></li>
+			<li><a href="https://soundcloud.com/lgeniza" target="_blank">soundcloud</a></li>
+			<li><a href="http://lucasgeniza.bandcamp.com/" target="_blank">bandcamp</a></li>
+			<li><a href="https://www.youtube.com/user/iPixzel" target="_blank">youtube</a></li>
+			<li><a href="https://www.facebook.com/lgeniza" target="_blank">facebook</a></li>
+			<li><a href="https://twitter.com/lgeniza" target="_blank">twitter</a></li>
 		</ul>
 	</script>
 
@@ -24,37 +32,29 @@
 	</script>
 
 	<script id="music" type="text/html">
-		<ul>
-			<li><a href="https://soundcloud.com/lgeniza" target="_blank">soundcloud</a></li>
-			<li><a href="http://lucasgeniza.bandcamp.com/" target="_blank">bandcamp</a></li>
-			<li><a href="https://www.youtube.com/user/iPixzel" target="_blank">youtube</a></li>
+		<ul id="#playlist">
+			<%
+				var $tracks = $('.sc-player .sc-trackslist li a');
+				if($tracks.length != 0)
+					$tracks.each(function(i,el){
+						if($(el).parent().is('.active'))
+							print('<li class="playlist-item active"><a href="'+el.href+'">'+el.innerHTML+'</a></li>');
+						else
+							print('<li class="playlist-item"><a href="'+el.href+'">'+el.innerHTML+'</a></li>');
+					});
+				else
+					print('<li>loading...</li>');
+			%>
 			<li>&nbsp;</li>
 			<li><a href="#">back</a></li>
 		</ul>
 	</script>
 
-	<script id="social" type="text/html">
-		<ul>
-			<li><a href="https://www.facebook.com/lgeniza" target="_blank">facebook</a></li>
-			<li><a href="https://twitter.com/lgeniza" target="_blank">twitter</a></li>
-			<li>&nbsp;</li>
-			<li><a href="#">back</a></li>
-		</ul>
-	</script>
 	<div id="bg" data-vide-bg="video/circa.mp4" data-vide-options="loop: true, muted: true, position: 0% 0%, posterType:jpeg"></div>
 	<div id="filter"></div>
-	<!-- <div id="logo">
-		<div>
-			<div id="logo-name">
-				<div id="logo-first-name">LUCAS</div>
-				<div id="logo-last-name">GENIZA</div>
-			</div>
-		</div>
-		<iframe width="500" height="130" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/52641776&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false&amp;buying=false&amp;sharing=false&amp;download=false&amp;show_bpm=false&amp;liking=false"></iframe>
-	</div> -->
 	<h1 id="name">lucas geniza</h1>
 	<div id="content">
 	</div>
-	<script type="text/javascript" src="js/main.js"></script>
+	<a href="https://soundcloud.com/lgeniza/sets/circa95" class="sc-player">player</a>
 </body>
 </html>
