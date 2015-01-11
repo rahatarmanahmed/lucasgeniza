@@ -1,0 +1,71 @@
+@import url('../font/josefinslab-thin-webfont.css');
+
+* {
+	font-family: 'josefin-slab', "Courier New", Courier, monospace;
+}
+
+html {
+	background-color: black;
+}
+
+body {
+	background-color: rgba(0, 0, 0, 0);
+	margin: 0;
+	padding: 0;
+	color: #FFF;
+	padding-left: 20px;
+}
+
+#bg {
+	background: url('../video/circa.jpeg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -100;
+}
+
+#filter {
+	background-image: url('../img/gray_jean.png');
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: -99;
+}
+
+#name {
+	padding: 0;
+	margin: 0;
+	padding-top: 10px;
+	font-size: 60px;
+	font-weight: 100;
+}
+
+#content {
+	font-size: 32px;
+}
+
+#content ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	padding-top: 20px;
+}
+
+a {
+	color: rgba(255,255,255,.75);
+	text-decoration: none;
+}
+
+#bio-text {
+	font-size: 24px;
+	max-width: 400px;
+	color: rgba(255,255,255,.75);
+}
