@@ -1,7 +1,7 @@
-@import url('../font/josefinslab-thin-webfont.css');
-
+@import url(http://fonts.googleapis.com/css?family=Raleway:100);
 * {
-	font-family: 'josefin-slab', "Courier New", Courier, monospace;
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	font-weight: 100;
 }
 
 html {
