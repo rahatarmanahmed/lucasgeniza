@@ -16,6 +16,16 @@ body {
 	padding-left: 15px;
 }
 
+
+a {
+	color: rgba(255,255,255,.75);
+	text-decoration: none;
+}
+
+a:hover {
+	color: rgba(143, 255, 255, 0.75);
+}
+
 #bg {
 	background: url('../video/circa.jpeg') no-repeat center center fixed;
 	-webkit-background-size: cover;
@@ -60,11 +70,6 @@ body {
 	padding: 0;
 	margin: 0;
 	padding-top: 20px;
-}
-
-a {
-	color: rgba(255,255,255,.75);
-	text-decoration: none;
 }
 
 #bio-text {
